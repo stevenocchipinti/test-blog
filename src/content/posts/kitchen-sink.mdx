@@ -1,15 +1,34 @@
 ---
 title: Kitchen Sink
 subtitle: Everything you could want
-description: A page that shows everything
-pubDate: '2000-01-01'
+description: "A page that shows everything"
+pubDate: "January 1 2000"
 hidden: true
 ---
 
 import Grid from "@/components/Grid.astro"
 import Img from "@/components/Img.astro"
+import Travel from "@/components/Travel.astro"
 
 ## The travel component
+
+<Travel
+  items={[
+    "Place 1",
+    "--AIRPLANE--",
+    "Place 2",
+    "--BUS--",
+    "Place 3",
+    "--TAXI--",
+    "Place 4",
+    "--TRAIN--",
+    "Place 5",
+    "--TRAM--",
+    "Place 6",
+    "--WALK--",
+    "Place 7",
+  ]}
+/>
 
 Hi, there are all the headings.
 
@@ -19,15 +38,19 @@ Hi, there are all the headings.
 
 ### h3
 
-h4
+#### h4
 
-h5
+##### h5
 
-h6
+###### h6
 
-<Img originalAspectRatio src="2019-taiwan-vietnam/3f69d771d8824ffe992991f4a6139544.jpg" />
+<Img
+  originalAspectRatio
+  src="2019-taiwan-vietnam/3f69d771d8824ffe992991f4a6139544.jpg"
+/>
 
-Hello, this is a [link](https://google.com.au) and some *italic* and **bold** text.
+Hello, this is a [link](https://google.com.au) and some _italic_ and **bold**
+text.
 
 This is the styles for `inline code` and also a code block:
 
@@ -40,6 +63,14 @@ console.log(
 
 ## A youtube embed
 
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/aYRzej8v3RI"
+  frameborder="0"
+  allowfullscreen
+></iframe>
+
 ## A standalone image with the default square cropping
 
 This is the default to make it easier for the grids.
@@ -48,17 +79,21 @@ This is the default to make it easier for the grids.
 
 ## A standalone image with the originalAspectRatio
 
-<Img originalAspectRatio src="2019-taiwan-vietnam/c8ea9567452f42bf86ff4eb9ac022087.jpg" />
+<Img
+  originalAspectRatio
+  src="2019-taiwan-vietnam/c8ea9567452f42bf86ff4eb9ac022087.jpg"
+/>
 
 ## Grid of 1
 
-<Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
+<Grid>
+  <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
+</Grid>
 
 ## Grid of 2
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
 </Grid>
 
@@ -66,9 +101,7 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/b285725ba1af459a919dea751163ee70.jpg" />
-
   <Img src="2019-taiwan-vietnam/16c56cf6b52647f087d4f568002539e1.jpg" />
 </Grid>
 
@@ -76,11 +109,8 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
 </Grid>
 
@@ -88,13 +118,9 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/b285725ba1af459a919dea751163ee70.jpg" />
-
   <Img src="2019-taiwan-vietnam/16c56cf6b52647f087d4f568002539e1.jpg" />
-
   <Img src="2019-taiwan-vietnam/c57d062c2df648eebc9521bc01c09adb.jpg" />
-
   <Img src="2019-taiwan-vietnam/8ce6970bc7184e3e8af91f3b031facd0.jpg" />
 </Grid>
 
@@ -102,15 +128,10 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/b285725ba1af459a919dea751163ee70.jpg" />
-
   <Img src="2019-taiwan-vietnam/16c56cf6b52647f087d4f568002539e1.jpg" />
-
   <Img src="2019-taiwan-vietnam/c57d062c2df648eebc9521bc01c09adb.jpg" />
-
   <Img src="2019-taiwan-vietnam/8ce6970bc7184e3e8af91f3b031facd0.jpg" />
-
   <Img src="2019-taiwan-vietnam/15d4dfe9eec243bc9f2d8ce970953f25.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
 </Grid>
 
@@ -118,17 +139,11 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/b285725ba1af459a919dea751163ee70.jpg" />
-
   <Img src="2019-taiwan-vietnam/16c56cf6b52647f087d4f568002539e1.jpg" />
-
   <Img src="2019-taiwan-vietnam/c57d062c2df648eebc9521bc01c09adb.jpg" />
-
   <Img src="2019-taiwan-vietnam/8ce6970bc7184e3e8af91f3b031facd0.jpg" />
-
   <Img src="2019-taiwan-vietnam/15d4dfe9eec243bc9f2d8ce970953f25.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
 </Grid>
 
@@ -136,19 +151,12 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/b285725ba1af459a919dea751163ee70.jpg" />
-
   <Img src="2019-taiwan-vietnam/16c56cf6b52647f087d4f568002539e1.jpg" />
-
   <Img src="2019-taiwan-vietnam/c57d062c2df648eebc9521bc01c09adb.jpg" />
-
   <Img src="2019-taiwan-vietnam/8ce6970bc7184e3e8af91f3b031facd0.jpg" />
-
   <Img src="2019-taiwan-vietnam/15d4dfe9eec243bc9f2d8ce970953f25.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
 </Grid>
 
@@ -156,21 +164,13 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/b285725ba1af459a919dea751163ee70.jpg" />
-
   <Img src="2019-taiwan-vietnam/16c56cf6b52647f087d4f568002539e1.jpg" />
-
   <Img src="2019-taiwan-vietnam/c57d062c2df648eebc9521bc01c09adb.jpg" />
-
   <Img src="2019-taiwan-vietnam/8ce6970bc7184e3e8af91f3b031facd0.jpg" />
-
   <Img src="2019-taiwan-vietnam/15d4dfe9eec243bc9f2d8ce970953f25.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
 </Grid>
 
@@ -178,23 +178,14 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/b285725ba1af459a919dea751163ee70.jpg" />
-
   <Img src="2019-taiwan-vietnam/16c56cf6b52647f087d4f568002539e1.jpg" />
-
   <Img src="2019-taiwan-vietnam/c57d062c2df648eebc9521bc01c09adb.jpg" />
-
   <Img src="2019-taiwan-vietnam/8ce6970bc7184e3e8af91f3b031facd0.jpg" />
-
   <Img src="2019-taiwan-vietnam/15d4dfe9eec243bc9f2d8ce970953f25.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
 </Grid>
 
@@ -202,25 +193,15 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/b285725ba1af459a919dea751163ee70.jpg" />
-
   <Img src="2019-taiwan-vietnam/16c56cf6b52647f087d4f568002539e1.jpg" />
-
   <Img src="2019-taiwan-vietnam/c57d062c2df648eebc9521bc01c09adb.jpg" />
-
   <Img src="2019-taiwan-vietnam/8ce6970bc7184e3e8af91f3b031facd0.jpg" />
-
   <Img src="2019-taiwan-vietnam/15d4dfe9eec243bc9f2d8ce970953f25.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
 </Grid>
 
@@ -228,26 +209,15 @@ This is the default to make it easier for the grids.
 
 <Grid>
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/457e21843a0b464093506cd99998b3f1.jpg" />
-
   <Img src="2019-taiwan-vietnam/b285725ba1af459a919dea751163ee70.jpg" />
-
   <Img src="2019-taiwan-vietnam/16c56cf6b52647f087d4f568002539e1.jpg" />
-
   <Img src="2019-taiwan-vietnam/c57d062c2df648eebc9521bc01c09adb.jpg" />
-
   <Img src="2019-taiwan-vietnam/8ce6970bc7184e3e8af91f3b031facd0.jpg" />
-
   <Img src="2019-taiwan-vietnam/15d4dfe9eec243bc9f2d8ce970953f25.jpg" />
-
   <Img src="2019-taiwan-vietnam/dc66f6a6607d47d58409a0fee32f593b.jpg" />
 </Grid>
